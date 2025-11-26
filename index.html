@@ -62,7 +62,6 @@ h2 {
   border-bottom: 3px solid #3498db;
 }
 
-/* GRID DE RESUMEN - ESCRITORIO */
 .summary-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -102,7 +101,6 @@ h2 {
   background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
 }
 
-/* CONTENEDORES DE GRÁFICOS - ESCRITORIO */
 .chart-container {
   position: relative;
   margin: 2rem auto;
@@ -124,7 +122,6 @@ h2 {
   height: auto !important;
 }
 
-/* TABLAS RESPONSIVAS */
 .table-wrapper {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -169,7 +166,6 @@ tr:last-child td {
   border-bottom: none;
 }
 
-/* BOTÓN MOSTRAR MÁS */
 .toggle-btn {
   display: block;
   margin: 3rem auto;
@@ -208,7 +204,6 @@ tr:last-child td {
   transform: rotate(180deg);
 }
 
-/* SECCIÓN PLEGABLE */
 .collapsible-section {
   display: none;
   animation: slideDown 0.4s ease-out;
@@ -229,7 +224,6 @@ tr:last-child td {
   }
 }
 
-/* SCROLL SUAVE */
 html {
   scroll-behavior: smooth;
 }
@@ -257,9 +251,7 @@ html {
   background: #555;
 }
 
-/* ========================================
-   RESPONSIVE DESIGN - TABLET
-   ======================================== */
+
 @media (max-width: 1024px) {
   header h1 {
     font-size: 2rem;
@@ -284,9 +276,7 @@ html {
   }
 }
 
-/* ========================================
-   RESPONSIVE DESIGN - MÓVIL
-   ======================================== */
+
 @media (max-width: 768px) {
   body {
     font-size: 15px;
@@ -318,7 +308,6 @@ html {
     margin-bottom: 1.25rem;
   }
   
-  /* GRID 2x2 EN MÓVIL */
   .summary-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
@@ -336,7 +325,6 @@ html {
     margin-top: 0.5rem;
   }
   
-  /* GRÁFICOS MÁS GRANDES EN MÓVIL */
   .chart-container {
     height: 350px;
     max-width: 100%;
@@ -375,9 +363,7 @@ html {
   }
 }
 
-/* ========================================
-   RESPONSIVE DESIGN - MÓVIL PEQUEÑO
-   ======================================== */
+
 @media (max-width: 480px) {
   body {
     font-size: 14px;
@@ -451,9 +437,6 @@ html {
   }
 }
 
-/* ========================================
-   ANIMACIONES DE CARGA
-   ======================================== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -502,7 +485,6 @@ html {
   </div>
 </div>
 
-<!-- BOTÓN PARA MOSTRAR MÁS -->
 <button class="toggle-btn" onclick="toggleDetails(this)">Mostrar más</button>
 
 <div class="collapsible-section" id="detailedReport">
@@ -545,9 +527,6 @@ html {
 </section>
 
 <script>
-// ========================================
-// GRÁFICO CIRCULAR — ADAPTADO AL NUEVO DISEÑO
-// ========================================
 
 const espacioUsado = 666.55;
 const espacioLibre = 264.96;
@@ -603,9 +582,6 @@ new Chart(ctx, {
   }
 });
 
-// ========================================
-// GRÁFICO DE BARRAS — ADAPTADO A NUEVO DISEÑO
-// ========================================
 
 var años = [
   {"Año":"2023","Cantidad":593},
@@ -662,9 +638,6 @@ new Chart(ctx2, {
   }
 });
 
-// ========================================
-// REAJUSTAR GRÁFICOS AL CAMBIAR VENTANA
-// ========================================
 window.addEventListener('resize', () => {
   Chart.helpers.each(Chart.instances, function(instance) {
     instance.resize();
@@ -674,9 +647,6 @@ window.addEventListener('resize', () => {
 
 
 <script>
-// ========================================
-// FUNCIÓN PARA SECCIÓN COLAPSABLE
-// ========================================
 function toggleDetails(button) {
   const section = document.getElementById('detailedReport');
   const isActive = section.classList.contains('active');
